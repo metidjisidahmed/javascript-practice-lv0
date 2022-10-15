@@ -238,9 +238,13 @@ function  weekDay(){
 
 function  weekDayV2(){
     let weekday = Number(prompt("give me a weekday"))
+    //  0 , 1,2,999
+
+    // "add" , "substract" , "multiply" , "divide" , "modulos" , "ksklsdqilqsd"
     switch (weekday){
         case 0 :
             alert("Sunday")
+
             break
         case 1 :
             alert("Monday")
@@ -263,7 +267,79 @@ function  weekDayV2(){
             break
         default :
             alert("invalid choice")
+    }
+}
+
+function Calculator(){
+    let num1 = Number(prompt("Give me the first number"))
+    let num2 = Number(prompt("Give me the second  number"))
+
+    let operation = prompt("Give me the operation")
+    let result = 0
+
+    switch (operation){
+        case "add":
+            result=num1+num2
+            alert("the result is :" + result)
+            break
+        case "multiply":
+            result=num1*num2
+            alert("the reult is : " + result)
+            break
+        case  "subtract":
+            result = num1-num2
+            alert("teh result is : "+ result)
+            break
+        case "divide":
+            result=num1/num2
+            alert("the divide is : " + result)
+            break
+        case "modulos":
+            result = num1%num2
+            alert("modulos  :"+ result)
+            break
+        default :
+            alert("invalid operation")
+            break
+
+    }
+}
+
+
+function WhatToDisplayInCalculator(){
+    let num1 = Number(prompt("Give me the first number"))
+    //50
+    let num2 = Number(prompt("Give me the second  number"))
+    //6
+    let operation = prompt("Give me the operation")
+    let result = 0
+
+    switch (operation){
+        case "add":
+            result=num1+num2
+            // alert("the result is :" + result)
+            break
+        case "multiply":
+            result=num1*num2
+            // 300
+            // alert("the reult is : " + result)
+            break
+        case  "subtract":
+            result = num1-num2
+            // alert("teh result is : "+ result)
+            break
+        case "divide":
+            result=num1/num2
+            // alert("the divide is : " + result)
+            break
+        case "modulos":
+            result = num1%num2
+            // alert("modulos  :"+ result)
+            break
+        default :
+            break
 
     }
 
+    alert("I have to display in the calculator", result) // 300
 }
