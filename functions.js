@@ -178,3 +178,92 @@ function amIDeveloperV2(){
         alert("you are nothing")
     }
 }
+
+
+function numberDays(){
+ let months
+ months = Number(prompt("Give me the month"))
+ if(months >= 1 && months <= 12){
+     alert("valid choice")
+     if(months==2){
+         alert("29 days")
+     }else if  (months==4 ||months==6 || months ==9 || months ==11){
+         alert("30 days")
+     }else {
+         alert("31 days")
+     }
+ }else{
+     alert("invalid choice")
+ }
+}
+// ! =
+
+function leapYear(){
+    let year
+    year= Number(prompt("Give me a year "))
+    if( year%4==0 && year%100 != 0 ){
+        alert("leap year")
+    }else if(year%400==0){
+        alert("leap year")
+    }else{
+        alert("Not a leap year")
+    }
+}
+
+function leapYearV2(){
+    let year
+    year= Number(prompt("Give me a year "))
+    if( (year%4==0 && year%100 != 0) || (year%400==0) ){
+        alert("leap year")
+    }else{
+        alert("Not a leap year")
+    }
+}
+
+
+function  weekDay(){
+    let weekday = Number(prompt("give me a weekday"))
+    if(weekday >= 0 && weekday <= 6){
+            if(weekday==0){
+                alert("Sunday")
+            }else if (weekday==1){
+                alert("Monday")
+            }
+            //....etc
+    }else{
+        alert("invalid choice")
+    }
+}
+
+
+function  weekDayV2(){
+    let weekday = Number(prompt("give me a weekday"))
+    switch (weekday){
+        case 0 :
+            alert("Sunday")
+            break
+        case 1 :
+            alert("Monday")
+            break
+        case 2 :
+            alert("Tuesday")
+            break
+        case 3 :
+            alert("Wednesday")
+            break
+        case 4 :
+            alert("Thursday")
+            break
+
+        case 5 :
+            alert("Friday")
+            break
+        case 6 :
+            alert("Saturday")
+            break
+        default :
+            alert("invalid choice")
+
+    }
+
+}
