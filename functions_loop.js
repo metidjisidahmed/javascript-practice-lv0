@@ -1,6 +1,6 @@
 function from1toN(){
-    let Ntimes= Number(prompt(" N times ?"))
-    for(let i =1 ; i <=Ntimes ; i=i+1  ){
+    let end= Number(prompt(" N times ?"))
+    for(let i =1 ; i <=end ; i=i+1  ){
         console.log("i = "+ i)
     }
 
@@ -36,6 +36,18 @@ function factorial(){
 
 }
 
+function factorialWhile(){
+    let number=Number(prompt("Give me a number to calculate its factorial"))
+    let result =1
+    let i = 1
+    while(i<= number ){
+        result = result*i
+        console.log(result)
+        i=i+1
+    }
+    alert(number+"! = "+ result)
+}
+
 
 
 function factorialBackward(){
@@ -66,3 +78,100 @@ function verifyIsPrimalNumber(){
         alert("he is primal")
     }
 }
+
+function fizzBuzzWhile(){
+    let i =1
+    while (i<101){
+        if(i%3==0 && i%5 ==0){
+            console.log("FizzBuzz")
+        }else if(i%3==0){
+            console.log("Fizz")
+        }else if (i%5==0){
+            console.log("Buzz")
+        }else{
+            console.log(i)
+        }
+        // i=i+50
+        // i+=50
+        i=i+1
+
+        // i++
+        // // i = i-1
+        // i--
+    }
+}
+
+function EnigmeSolution(b){
+    let a =0
+
+    let max = 0
+
+    let finalA = null
+    let finalB = null
+    while( b>= a){
+        let inigme =  a*a*b
+        // console.log("current inigme = ", inigme)
+        if(inigme > max ){
+            // console.log("the current inigme is bigger than my current max ! ")
+            max= inigme
+            finalA = a
+            finalB=b
+            // console.log("current max =" + max)
+            // console.log("current final A = "+a)
+            // console.log("current final B = "+ b)
+        }
+        a=a+1
+        b=b-1
+    }
+
+    // console.log("MY FINAL A =", finalA)
+    // console.log("MY FINAL B =", finalB)
+    // console.log("MY FINAL MAX =", max)
+
+    return max
+
+}
+
+function leapYear(year){
+    // year= Number(prompt("Give me a year "))
+    if( year%4==0 && year%100 != 0 ){
+        alert("leap year")
+        return true
+    }else if(year%400==0){
+        alert("leap year")
+        return true
+    }else{
+        alert("Not a leap year")
+        return false
+    }
+}
+
+function numberDays(year){
+    let months
+    months = Number(prompt("Give me the month"))
+    if(months >= 1 && months <= 12){
+        alert("valid choice")
+        if(months==2){
+            if(leapYear(year)){
+                alert("29 days")
+
+            }else{
+                alert("28 days")
+            }
+        }else if  (months==4 ||months==6 || months ==9 || months ==11){
+            alert("30 days")
+        }else {
+            alert("31 days")
+        }
+    }else{
+        alert("invalid choice")
+    }
+}
+
+
+
+
+
+
+
+
