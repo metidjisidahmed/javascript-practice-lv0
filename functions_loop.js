@@ -128,7 +128,19 @@ function EnigmeSolution(b){
     // console.log("MY FINAL B =", finalB)
     // console.log("MY FINAL MAX =", max)
 
-    return max
+    // let solution2 ={}
+    // solution2.max = max
+    // solution2.a = finalA
+    // solution2.b = finalB
+
+    let solution = {
+        "max" : max,
+        "a" : finalA,
+    }
+    solution.b = finalB
+
+
+    return solution
 
 }
 
