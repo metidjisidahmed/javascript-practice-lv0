@@ -185,5 +185,3 @@ function numberDays(year){
 
 
 
-
-
